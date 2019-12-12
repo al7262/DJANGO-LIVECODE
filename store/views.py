@@ -16,3 +16,21 @@ def detail(request, item_id):
         'isHome': True,
         'item': item
     })
+
+def new(request):
+    return render(request, 'store/new.html', {
+        'isHome': True
+    })
+
+def posted(request):
+    toItem = Item()
+    toItem.name = request.POST['name']
+    toItem.photo = request.POST['photo']
+    toItem.price = request.POST['price']
+    toItem.detail = request.POST['detail']
+    toItem.save()
+    items = Item.objects.all()
+    return render(request, 'store/index.html', {
+        'isHome': True,
+        'items': items
+    })

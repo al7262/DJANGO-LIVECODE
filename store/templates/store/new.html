@@ -7,8 +7,18 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6 box form">
-            <form>
-                {%%}
+            <form method="POST" action="{% url 'store:posted' %}">
+                {% csrf_token %}
+                    <label for="name">Title:</label></br>
+                    <input type="text" name="name" id="name" placeholder="Input name of item" style="width: 100%;" required></br>
+                    <label for="photo">Photo URL:</label></br>
+                    <input type="text" name="photo" id="photo" placeholder="Input URL photo of item" style="width: 100%;" required></br>
+                    <label for="price">Price:</label></br>
+                    <input type="text" name="price" id="price" placeholder="Input price of item" style="width: 100%;" required></br>
+                    <label for="name">Details</label></br>
+                    <textarea name="detail" id="detail" placeholder="Input detail of item" style="width: 100%;" required></textarea></br>
+                    </br>
+                    <button class="btn btn-primary" type="submit">Post it!</button>
             </form>
         </div>
         <div class="col-md-3"></div>
