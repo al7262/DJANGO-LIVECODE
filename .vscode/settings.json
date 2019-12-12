@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/home/alta5/Documents/DJANGO/DJANGO-LIVECODE/django_env/bin/python3.6",
+    "python.pythonPath": "django_env/bin/python",
     "git.ignoreLimitWarning": true
 }
