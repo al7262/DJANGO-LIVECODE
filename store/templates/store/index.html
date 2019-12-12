@@ -5,6 +5,7 @@
     <div class="container">
         <div class="row gap50"></div>
         <div class="row">
+            {% if item %}
             {% for item in items %}
             <div class="col-md-4">
                 <div class="box">
@@ -15,6 +16,11 @@
                 </div>
             </div>
             {% endfor %}
+            {% else %}
+            <div class="col-md-12 d-flex justify-content-center">
+                <p>There is nothing here</p>
+            </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
