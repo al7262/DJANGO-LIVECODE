@@ -1,0 +1,40 @@
+.navbar-brand{
+    background-color: #20a099;
+    padding: 10px;
+}
+
+.navbar{
+    padding:0;
+}
+
+.bg-blue{
+    background-color: #29cbc4;
+}
+
+.navbar-collapse ul li{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.box{
+    border: 1px solid lightgrey;
+    margin-bottom: 20px;
+}
+
+.gap50{
+    height: 50px;
+}
+
+.box img{
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.box p{
+    padding: 0px 10%;
+    margin: 0;
+}
+
+.box a{
+    padding: 0px 10%;
+}

@@ -1,0 +1,20 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row gap50"></div>
+        <div class="row">
+            {% for item in items %}
+            <div class="col-md-4">
+                <div class="box">
+                    <img src="{{item.photo}}g">
+                    <p><strong>{{item.name}}</strong></p>
+                    <p>Rp{{item.price}}</p>
+                    <a href="{% url 'store:detail' item.id %}">Item Details</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
