@@ -7,7 +7,7 @@ def index(request):
     items = Item.objects.all()
     return render(request, 'store/index.html', {
         'isHome': True,
-        'item': items
+        'items': items
     })
 
 def detail(request, item_id):
